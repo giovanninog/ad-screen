@@ -9,7 +9,7 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aqui você pode adicionar lógica para enviar os dados de login para o servidor
+        
         console.log('Email:', email); <FaUser />
         console.log('Password:', password);
     };
