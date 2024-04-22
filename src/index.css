@@ -15,7 +15,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: rgb(167, 167, 167);
+  background: url(Components/unnamed.jpg)
+  no-repeat;
+  background-size: cover;
 }
 
 code {

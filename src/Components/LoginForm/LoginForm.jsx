@@ -4,50 +4,30 @@ import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 
 const LoginForm = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        console.log('Email:', email); <FaUser />
-        console.log('Password:', password);
-    };
-
     return (
-        <div className="login-form">
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="input-box">
-                <label htmlFor="username">Username:</label>
-                <input
-                
-                    type="username"
-                    id="username"
-                    name="username"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                </div>
-                <FaUser />
-                <br />
-                <div className="input-box">
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </div>
-                <FaLock />
-                <br />
-                <button type="submit">Login</button>
-            </form>
-        </div>
+      <div className="wrapper">
+        <form action="">
+          <h1>Login</h1>
+          <div className="input-box">
+            <input type="text" placeholder="E-mail" required />
+            <FaUser className='icon'/>
+          </div>
+          <div className="input-box">
+            <input type="password" placeholder="Senha" required />
+            <FaLock className='icon'/>
+          </div>
+          <div className="remember-forgot">
+            <label>
+              <input type="checkbox" /> Mantenha-se conectado
+            </label>
+            <a href="#">Esqueci minha senha</a>
+          </div>
+          <button type="submit">Login</button>
+          <div className="register-link">
+            <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+          </div>
+        </form>
+      </div>
     );
 };
 
